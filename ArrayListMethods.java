@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class ArrayListMethods{
     public static void main(String[] args){
+        System.out.println("");
         Scanner sc = new Scanner(System.in);
         ArrayList<String> rotCreature = new ArrayList<String>();
         rotCreature.add("Tun Tun Tun Sahur");
