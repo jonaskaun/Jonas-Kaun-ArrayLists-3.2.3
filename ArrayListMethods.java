@@ -13,11 +13,13 @@ public class ArrayListMethods{
         rotCreature.add("Chimpanzini Bananini");
         int indexTemp;
         int t = 0;
+        int maxIndex;
         String input;
         boolean quit = false;
         while(quit == false){
+            maxIndex = rotCreature.size();
             System.out.println(rotCreature);
-            System.out.println("Would you like to (a)dd, (i)nsert, (r)emove, Re(p)lace or (q)uit?");
+            System.out.println("Would you like to (a)dd, (i)nsert, (r)emove, Re(p)lace or (q)uit? :::  Index values begin at 0");
             input = sc.nextLine();
             if (input.equals("a")){
                 System.out.println("What would you like to add?");
@@ -29,16 +31,29 @@ public class ArrayListMethods{
                 input = sc.nextLine();
                 System.out.println("At what index would you like to insert it?");
                 indexTemp = sc.nextInt();
-                rotCreature.set(indexTemp, input);
+                if (indexTemp<= maxIndex){
+                    rotCreature.set(indexTemp,input);
+                }
+                else{
+                    System.out.println("\ninvalid index\n");
+                }
 
             }
             else if (input.equals("r")){
-                System.out.println("\nReplace by (v)alue, or (i)ndex");
+                System.out.println("\nRemove by (v)alue, or (i)ndex");
                 input = sc.nextLine();
                 if (input.equals("v")){
-                    
+                    System.out.println("Which value do you want to remove?");
+                    input = sc.nextLine();
+                    rotCreature.remove(input);
+
                 }
                 else if (input.equals("i")){
+                    System.out.println("Which index would you like to remove?");
+                    indexTemp = sc.nextInt();
+                    if(indexTemp<= maxIndex){
+                        rotCreature.remove(indexTemp);
+                    }
 
                 }
                 else{
