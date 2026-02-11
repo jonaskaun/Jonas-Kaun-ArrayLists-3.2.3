@@ -14,13 +14,20 @@ public class ArrayListExample
       animalList.add("Frog");
       animalList.add("Horse");
       animalList.add("Cow");
-      
+           
       // display list
       System.out.println(animalList);
+
+      animalList.add("Bird");
+      animalList.add(3,"Snake");
+      System.out.println(animalList.get(2));
+      System.out.println(animalList.get(3));
+      animalList.remove("Frog");
       
       /* your code here */ 
       
       // display modified list
       System.out.println(animalList);
+      System.out.println("animal list size: "+ animalList.size());
    }  
 }
