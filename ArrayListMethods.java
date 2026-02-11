@@ -49,7 +49,12 @@ public class ArrayListMethods{
             else if (input.equals("p")){
                 System.out.println("What value would you like to repace?");
                 input = sc.nextLine();
-                
+                indexTemp =rotCreature.indexOf(input);
+                rotCreature.remove(indexTemp);
+                System.out.println("What would you like to replace it with?");
+                input = sc.nextLine();
+                rotCreature.add(indexTemp, input);
+
 
             }
             else if (input.equals("q")){
