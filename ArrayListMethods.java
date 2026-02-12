@@ -20,7 +20,7 @@ public class ArrayListMethods{
         while(quit == false){
             maxIndex = rotCreature.size();
             System.out.println(rotCreature);
-            System.out.println("Would you like to (a)dd, (i)nsert, (r)emove, Re(p)lace or (q)uit? ::: current size: "+ rotCreature.size()+" (Index values begin at 0)");
+            System.out.println("Would you like to (a)dd, (i)nsert, (r)emove, Re(p)lace or (q)uit? ::: current size by index: "+ (rotCreature.size()-1) +" (Index values begin at 0)");
             input = sc.nextLine();
             if (input.equals("a")){
                 System.out.println("What would you like to add?");
