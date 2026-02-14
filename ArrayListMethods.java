@@ -20,7 +20,7 @@ public class ArrayListMethods{
         while(quit == false){
             maxIndex = rotCreature.size();
             System.out.println(rotCreature);
-            System.out.println("Would you like to (a)dd, (i)nsert, (r)emove, Re(p)lace or (q)uit? ::: current size by index: "+ (rotCreature.size()-1) +" (Index values begin at 0)");
+            System.out.println("Would you like to (a) add, (i) insert, (d) remove, (r) replace or (q) quit? ::: current size by index: "+ (rotCreature.size()-1) +" (Index values begin at 0)");
             input = sc.nextLine();
             if (input.equals("a")){
                 System.out.println("What would you like to add?");
@@ -30,17 +30,17 @@ public class ArrayListMethods{
             else if (input.equals("i")){
                 System.out.println("\nWhat would you like to insert?");
                 input = sc.nextLine();
-                System.out.println("At what index would you like to insert it?");
+                System.out.println("At what index would you like to insert it? (index values begin at 0");
                 indexTemp = sc.nextInt();
                 if (indexTemp<= maxIndex){
-                    rotCreature.set(indexTemp,input);
+                    rotCreature.add(indexTemp,input);
                 }
                 else{
                     System.out.println("\ninvalid index\n");
                 }
 
             }
-            else if (input.equals("r")){
+            else if (input.equals("d")){
                 System.out.println("\nRemove by (v)alue, or (i)ndex");
                 input = sc.nextLine();
                 if (input.equals("v")){
@@ -50,7 +50,7 @@ public class ArrayListMethods{
 
                 }
                 else if (input.equals("i")){
-                    System.out.println("Which index would you like to remove?");
+                    System.out.println("Which index would you like to remove? (index values begin at 0)");
                     indexTemp = sc.nextInt();
                     if(indexTemp<= maxIndex){
                         rotCreature.remove(indexTemp);
